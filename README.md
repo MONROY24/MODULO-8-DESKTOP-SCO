@@ -1,34 +1,56 @@
-# Módulo 8 – Análisis Predictivo con Inteligencia Artificial
-### Sistema Contable Computarizado · Ciclo I-2026
+<div align="center">
+  <img src="./UES.png" alt="UES Logo" width="100"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./MR24.png" alt="MR24 Logo" width="100"/>
+
+  # 🤖 Módulo 8 – Análisis Predictivo con Inteligencia Artificial
+  **Sistema Contable Computarizado · Ciclo I-2026**
+
+  ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+  ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+  ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
+  ![Ant](https://img.shields.io/badge/Apache_Ant-A81C7D?style=for-the-badge&logo=apacheant&logoColor=white)
+</div>
 
 ---
 
-## Índice
-1. [Descripción General](#descripción-general)
-2. [Estructura del Proyecto](#estructura-del-proyecto)
-3. [Arquitectura MVC](#arquitectura-mvc)
-4. [Configuración de Base de Datos](#configuración-de-base-de-datos)
-5. [Cómo Ejecutar el Módulo](#cómo-ejecutar-el-módulo)
-6. [Guía de Integración al Proyecto Unificado](#guía-de-integración-al-proyecto-unificado)
-7. [Exportación a PDF](#exportación-a-pdf)
-8. [Cómo Funciona la Red Neuronal](#cómo-funciona-la-red-neuronal)
+## 📑 Índice
+1. [🌟 Descripción General](#-descripción-general)
+2. [✨ Características Principales](#-características-principales)
+3. [📂 Estructura del Proyecto](#-estructura-del-proyecto)
+4. [🏗️ Arquitectura MVC](#️-arquitectura-mvc)
+5. [⚙️ Configuración de Base de Datos](#️-configuración-de-base-de-datos)
+6. [🚀 Cómo Ejecutar el Módulo](#-cómo-ejecutar-el-módulo)
+7. [🔗 Guía de Integración al Proyecto Unificado](#-guía-de-integración-al-proyecto-unificado)
+8. [📄 Exportación a PDF](#-exportación-a-pdf)
+9. [🧠 Cómo Funciona la Red Neuronal](#-cómo-funciona-la-red-neuronal)
 
 ---
 
-## Descripción General
+## 🌟 Descripción General
 
-Este módulo implementa un sistema de **predicción de ventas y compras del mes siguiente**
-usando una **Red Neuronal Artificial (MLP – Multilayer Perceptron)** implementada en Java puro,
-sin dependencias externas de frameworks de Deep Learning.
+Este módulo implementa un sistema avanzado de **predicción de ventas y compras del mes siguiente**
+utilizando una **Red Neuronal Artificial (MLP – Multilayer Perceptron)** desarrollada completamente en Java puro,
+sin necesidad de dependencias externas ni frameworks de Deep Learning.
 
-El módulo es completamente autónomo y se conecta a la misma base de datos del proyecto
-mediante tablas mock que pueden reemplazarse fácilmente al integrar con los otros módulos.
+El módulo es completamente autónomo y se conecta a la misma base de datos del proyecto principal
+mediante tablas *mock* que pueden reemplazarse fácilmente al integrar con los otros módulos del Sistema Contable.
 
 ---
 
-## Estructura del Proyecto
+## ✨ Características Principales
 
-```
+- **Inteligencia Artificial Propia:** Red neuronal programada desde cero con *Backpropagation*.
+- **Interfaz Gráfica Premium:** Uso de `GradientPaint`, curvas suavizadas y componentes Swing altamente personalizados.
+- **Exportación a PDF Nativa:** Generador PDF construido con `Graphics2D` puro, sin librerías externas.
+- **Arquitectura Desacoplada:** Diseño MVC robusto con comunicación asíncrona mediante `SwingWorker`.
+- **Seguridad y Configuración:** Gestión de credenciales mediante `db.properties` externalizado y variables de entorno.
+
+---
+
+## 📂 Estructura del Proyecto
+
+```text
 modulo8-ia/
 ├── .gitignore                              ← Archivos excluidos del repositorio
 ├── build.xml                              ← Build script (Apache Ant)
@@ -70,9 +92,9 @@ modulo8-ia/
 
 ---
 
-## Arquitectura MVC
+## 🏗️ Arquitectura MVC
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                         USUARIO                                  │
 │         Selecciona empresa → Clic "Ejecutar Análisis"           │
@@ -100,10 +122,11 @@ modulo8-ia/
     │               │                   │ · Botón PDF          │
     └───────────────┘                    └──────────────────────┘
 ```
+> 💡 *Para más detalles técnicos, consulta el archivo [arquitectura.md](./docs/arquitectura.md) en la carpeta `docs`.*
 
 ---
 
-## Configuración de Base de Datos
+## ⚙️ Configuración de Base de Datos
 
 Las credenciales ya **no están hardcodeadas** en el código. Se leen desde `config/db.properties`:
 
@@ -115,7 +138,7 @@ db.user=root
 db.password=
 ```
 
-También puedes usar **variables de entorno** (tienen prioridad sobre el archivo):
+También puedes usar **variables de entorno** (tienen prioridad sobre el archivo properties):
 ```bash
 set DB_URL=jdbc:mysql://miservidor:3306/miBD
 set DB_USER=miusuario
@@ -124,13 +147,13 @@ set DB_PASSWORD=mipassword
 
 ---
 
-## Cómo Ejecutar el Módulo
+## 🚀 Cómo Ejecutar el Módulo
 
 ### Pre-requisitos
-- Java JDK 17 o superior
-- MySQL o MariaDB en ejecución
-- Apache Ant (opcional para el build script)
-- Driver JDBC en `lib/` (ya incluido: `mariadb-java-client-3.5.6.jar`)
+- ☕ **Java JDK 17** o superior
+- 🐬 **MySQL** o **MariaDB** en ejecución
+- 🐜 **Apache Ant** (opcional para el build script)
+- 🔌 Driver JDBC en `lib/` (ya incluido: `mariadb-java-client-3.5.6.jar`)
 
 ### Paso 1: Configurar la base de datos
 ```sql
@@ -167,7 +190,7 @@ java -cp "build\classes;lib\mariadb-java-client-3.5.6.jar" ^
 
 ---
 
-## Guía de Integración al Proyecto Unificado
+## 🔗 Guía de Integración al Proyecto Unificado
 
 Cuando el equipo unifique el proyecto, solo debes hacer **2 cambios**:
 
@@ -182,15 +205,15 @@ import com.sistemacontable.modulo8.Main;
 new JMenuItem("Análisis de IA").addActionListener(e -> Main.lanzar());
 ```
 
-### Lo que NO hay que cambiar
-- `MotorPrediccionIA.java` (la red neuronal es agnóstica a los datos)
-- `PreprocesadorDatos.java`
-- `ExportadorPDF.java`
-- Toda la capa Vista y Controlador
+> ⚠️ **Lo que NO hay que cambiar**
+> - `MotorPrediccionIA.java` (la red neuronal es agnóstica a los datos)
+> - `PreprocesadorDatos.java`
+> - `ExportadorPDF.java`
+> - Toda la capa Vista y Controlador
 
 ---
 
-## Exportación a PDF
+## 📄 Exportación a PDF
 
 El botón **"📄 Exportar a PDF"** se habilita automáticamente después de ejecutar un análisis.
 
@@ -200,15 +223,15 @@ El PDF generado contiene:
 - **Página 2:** Gráfica de barras con gradientes y línea de tendencia,
   análisis de recomendaciones automático según el comportamiento del modelo.
 
-El PDF usa Java Graphics2D puro (sin dependencias externas).
-El bug de offsets en la tabla xref ha sido corregido en esta versión.
+El PDF usa **Java Graphics2D puro** (sin dependencias externas).
+*El bug de offsets en la tabla xref ha sido corregido en esta versión.*
 
 ---
 
-## Cómo Funciona la Red Neuronal
+## 🧠 Cómo Funciona la Red Neuronal
 
 ### Arquitectura
-```
+```text
 Entrada (3)  →  Oculta 1 (8, ReLU)  →  Oculta 2 (4, ReLU)  →  Salida (2, Sigmoid)
   compras          8 neuronas              4 neuronas            ventas_pred
   ventas                                                          compras_pred
@@ -216,21 +239,24 @@ Entrada (3)  →  Oculta 1 (8, ReLU)  →  Oculta 2 (4, ReLU)  →  Salida (2, S
 ```
 
 ### Proceso de entrenamiento
-1. **Normalización Min-Max:** Todos los valores se escalan al rango [0, 1].
-2. **Preparación de datos:** El historial de N meses genera N-1 pares (entrada, salida),
-   donde la salida del mes i es el valor real del mes i+1.
+1. **Normalización Min-Max:** Todos los valores se escalan al rango `[0, 1]`.
+2. **Preparación de datos:** El historial de `N` meses genera `N-1` pares (entrada, salida),
+   donde la salida del mes `i` es el valor real del mes `i+1`.
 3. **Backpropagation:** 5.000 épocas con tasa de aprendizaje = 0.05.
-4. **Log de MSE:** El error cuadrático medio se imprime cada 1.000 épocas para diagnóstico.
+4. **Log de MSE:** El error cuadrático medio (Mean Squared Error) se imprime cada 1.000 épocas para diagnóstico.
 5. **Predicción:** Se alimenta el último mes conocido y la red genera la predicción.
-6. **Desnormalización:** El resultado se convierte de vuelta a la escala de dólares.
+6. **Desnormalización:** El resultado se convierte de vuelta a la escala real de dólares.
 
 ### Nivel de confianza
 | Meses de historial | Nivel de confianza |
-|---|---|
-| ≥ 10 meses | Alto |
-| 6 – 9 meses | Medio |
-| 3 – 5 meses | Bajo |
+|:---:|:---|
+| **≥ 10 meses** | 🟢 Alto |
+| **6 – 9 meses** | 🟡 Medio |
+| **3 – 5 meses** | 🔴 Bajo |
 
 ---
 
-*Módulo 8 · Sistema Contable Computarizado · Ciclo I-2026*
+<div align="center">
+  <i>Módulo 8 · Sistema Contable Computarizado · Ciclo I-2026</i><br>
+  <b>Universidad de El Salvador</b>
+</div>
