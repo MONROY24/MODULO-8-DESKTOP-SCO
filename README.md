@@ -4,7 +4,7 @@
   <img src="./MR24.png" alt="MR24 Logo" width="100"/>
 
   # 🤖 Módulo 8 – Análisis Predictivo con Inteligencia Artificial
-  **Sistema Contable Computarizado · Ciclo I-2026**
+  **Sistema Contables · Ciclo I-2026**
 
   ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
   ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
@@ -257,6 +257,6 @@ Entrada (3)  →  Oculta 1 (8, ReLU)  →  Oculta 2 (4, ReLU)  →  Salida (2, S
 ---
 
 <div align="center">
-  <i>Módulo 8 · Sistema Contable Computarizado · Ciclo I-2026</i><br>
+  <i>Módulo 8 · Sistema Contables · Ciclo I-2026</i><br>
   <b>Universidad de El Salvador</b>
 </div>
