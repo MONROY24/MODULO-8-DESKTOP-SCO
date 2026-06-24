@@ -1,0 +1,79 @@
+# ============================================================
+# .gitignore para Módulo 8 – Análisis Predictivo con IA
+# Proyecto Java con Ant
+# ============================================================
+
+# ── Compilación y construcción ───────────────────────────────
+build/
+target/
+dist/
+out/
+bin/
+*.class
+*.jar
+!lib/*.jar
+*.war
+*.ear
+sources.txt
+# ── IDEs y editores ─────────────────────────────────────────
+.idea/
+*.iml
+.eclipse/
+.project
+.classpath
+.settings/
+.vscode/
+nbproject/
+nb-configuration.xml
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+
+# ── Sistema Operativo ──────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+.TemporaryItems
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+ehthumbs.db
+.Thumbs.db
+.DS_Store
+
+# ── Logs y archivos temporales ──────────────────────────────
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+
+# ── Base de datos y archivos de estado ────────────────────
+*.db
+*.sqlite
+*.sqlite3
+db.lock
+*.lck
+
+# ── Archivos generados dinámicamente ────────────────────────
+*.pdf
+*.out
+target/
+.gradle/
+.maven/
+
+# ── Node y dependencias (si aplica) ──────────────────────
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# ── Configuración local (¡nunca versionar credenciales!) ─────
+# Descomenta si contiene información sensible:
+# config/db.properties
